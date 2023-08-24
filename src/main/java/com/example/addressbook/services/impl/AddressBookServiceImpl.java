@@ -3,19 +3,15 @@ package com.example.addressbook.services.impl;
 import com.example.addressbook.dtos.AddressBookRequestDto;
 import com.example.addressbook.dtos.AddressBookResponseDto;
 import com.example.addressbook.exceptions.ResourceNotFoundException;
-import com.example.addressbook.models.AddressBook;
-import com.example.addressbook.repositories.AddressBookRepository;
+import com.example.addressbook.models.address.AddressBook;
+import com.example.addressbook.repositories.address.AddressBookRepository;
 import com.example.addressbook.services.AddressBookService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor

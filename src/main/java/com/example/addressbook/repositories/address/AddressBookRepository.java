@@ -1,6 +1,6 @@
-package com.example.addressbook.repositories;
+package com.example.addressbook.repositories.address;
 
-import com.example.addressbook.models.AddressBook;
+import com.example.addressbook.models.address.AddressBook;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
