@@ -1,10 +1,10 @@
 package com.example.addressbook.builder;
 
 
-import com.example.addressbook.primaryEntity.Student;
-import com.example.addressbook.primaryEntity.StudentDTO;
-import com.example.addressbook.secondaryEntity.Teacher;
-import com.example.addressbook.secondaryEntity.TeacherDTO;
+import com.example.addressbook.entities.primary.Student;
+import com.example.addressbook.entities.primary.StudentDTO;
+import com.example.addressbook.entities.secondary.Teacher;
+import com.example.addressbook.entities.secondary.TeacherDTO;
 
 public class ObjectBuilder {
 	

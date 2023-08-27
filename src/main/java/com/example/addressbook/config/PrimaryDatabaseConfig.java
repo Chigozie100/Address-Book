@@ -24,10 +24,10 @@ import java.util.HashMap;
 @EnableTransactionManagement
 @EnableJpaRepositories(
 		entityManagerFactoryRef = "primaryEntityManagerFactory",
-		basePackages 	 = {"com.example.addressbook.primaryRepo"},
+		basePackages 	 = {"com.example.addressbook.repositories.primary"},
 		transactionManagerRef = "primaryTransactionManager"
 		)
-public class PrimaryConfig {
+public class PrimaryDatabaseConfig {
 
 	@Autowired
 	Environment env;
@@ -55,7 +55,7 @@ public class PrimaryConfig {
 		properties.put("hibernate.hbm2ddl.auto", "update");
 		properties.put("hibernate.dialect", "org.hibernate.dialect.Oracle10gDialect");
 		bean.setJpaPropertyMap(properties);
-		bean.setPackagesToScan("com.example.addressbook.primaryEntity");
+		bean.setPackagesToScan("com.example.addressbook.entities.primary");
 		return bean;
 
 	}
