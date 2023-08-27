@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 import org.springframework.core.env.Environment;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -24,11 +23,11 @@ import java.util.HashMap;
 @EnableTransactionManagement
 @EnableJpaRepositories(
 		entityManagerFactoryRef = "secondaryEntityManagerFactory",
-		basePackages 	 = {"com.example.addressbook.secondaryRepo"},
+		basePackages 	 = {"com.example.addressbook.repositories.secondary"},
 		transactionManagerRef = "secondaryTransactionManager"
 		)
 
-public class SecondaryConfig {
+public class SecondaryDatabaseConfig {
 
 	@Autowired
 	Environment env;
@@ -53,7 +52,7 @@ public class SecondaryConfig {
 		properties.put("hibernate.hbm2ddl.auto", "update");
 		properties.put("hibernate.dialect", "org.hibernate.dialect.Oracle10gDialect");
 		bean.setJpaPropertyMap(properties);
-		bean.setPackagesToScan("com.example.addressbook.secondaryEntity");
+		bean.setPackagesToScan("com.example.addressbook.entities.secondary");
 		return bean;
 	}
 

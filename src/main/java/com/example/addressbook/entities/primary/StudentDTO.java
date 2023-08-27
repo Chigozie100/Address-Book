@@ -1,4 +1,4 @@
-package com.example.addressbook.primaryEntity;
+package com.example.addressbook.entities.primary;
 
 
 public class StudentDTO {

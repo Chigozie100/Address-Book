@@ -1,4 +1,4 @@
-package com.example.addressbook.secondaryEntity;
+package com.example.addressbook.entities.secondary;
 
 import jakarta.persistence.*;
 

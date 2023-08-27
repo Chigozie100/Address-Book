@@ -2,12 +2,12 @@ package com.example.addressbook.controller;
 
 
 import com.example.addressbook.builder.ObjectBuilder;
-import com.example.addressbook.primaryEntity.Student;
-import com.example.addressbook.primaryEntity.StudentDTO;
-import com.example.addressbook.primaryRepo.PrimaryRepository;
-import com.example.addressbook.secondaryEntity.Teacher;
-import com.example.addressbook.secondaryEntity.TeacherDTO;
-import com.example.addressbook.secondaryRepo.SecondaryRepository;
+import com.example.addressbook.entities.primary.Student;
+import com.example.addressbook.entities.primary.StudentDTO;
+import com.example.addressbook.repositories.primary.studentRepository;
+import com.example.addressbook.entities.secondary.Teacher;
+import com.example.addressbook.entities.secondary.TeacherDTO;
+import com.example.addressbook.repositories.secondary.teacherRepository;
 import jakarta.persistence.EntityManagerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -30,10 +30,10 @@ public class StudentTeacherRestController {
 	EntityManagerFactory secondaryEntityManagerFactory;
 
 	@Autowired
-	PrimaryRepository studentRepo;
+	studentRepository studentRepo;
 
 	@Autowired
-	SecondaryRepository teacherRepo;
+	teacherRepository teacherRepo;
 
 	@PostMapping("/saveStudent")
 	public Student saveStudent(@RequestBody StudentDTO studentDTO) {
